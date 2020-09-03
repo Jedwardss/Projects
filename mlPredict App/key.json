@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sapient-codex-285604",
+  "private_key_id": "8894bec455912b40d903f995057e538926ca5a15",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCsrVWrz/4/uKIY\nND4A8n/4PXXiyCRhDAoQKhWnUh9v/yu0VWEWbXhBTpLldj0PrFHinXK22QwtzrSz\n1DCi4OByrzmrLFAt/BXkGBvq72fjH6Y95Oji1LefoQvu+FcBuhSu3G4I66SeuSyk\n7Pe7U+ODz7Q7HSWBHF+KnDoM9QBpXfrIbabi65wCRNOJuYn989WFfaClQHE9ACQz\nEnMfBB5xHgaixmmyIwUhAvnwPiPtOcjoIeVCKhfo2lZLu4O9dleHpqmBYZedaxoV\nxCFAvPr5jgvNdcEHJsIVMz3IxltJSJYLnyP4A3eT7cyPyDbsH6iBqx+HuQJ5Cktl\nrMt2YFyHAgMBAAECggEAGVWibiopXrv+EZhd8yb2c5DA4lxZn2DJe9mmLP21iGm4\ncHreWxCwm2mlz8NrQ14VnYQFjUzcUT7fRaBqNQYn/WuMBdCN6vvt/PXfPWGRV8IQ\nUqBqiBfhi6rF5MfMLCqwV39r0s86leG2lR6sshqlah9n4rcXW5FdddQPXaX3QNNq\nX+OVE4DtgWpeHnPcRKptgogVplz6M8wiHPb4ByKJtePLJgy3c2yK3FCzUkP1jCKj\npIUElCFLy11iHn+EzMcDVwGw4xksUOfiGZlrRyaTQ42BdwjH2N+Tqr23XXf4kKe0\nZkV8YV5KmfBRYOel0gw68xyOp1c1mtYnY/a03YA9cQKBgQDoIAlCM9mSed55SLnB\nXRirUxdIe1qTr0CWDKEY3J1dfaS+BA9pPlkPpgj9KDixlnqmIyIitB9svR1QHZNX\nETbEXLwK6YeGJXvDE6e45TyuEDoXuiMBACsHW0nvpy+xLz04YLyfP2BbvGt+RLCv\nEj9GiIWpumrrVeBj5m7ILXbjTQKBgQC+cADdQydhdE+THnWV0MLTYGrG4/LOtlma\n3XIyJJXEZpwZIG5m85XAETgn1V7I1E0VeteU320XWpDFU7lvz6C/93gMvivWcxWC\nhp+NdNDWF+ZS19IUKzUd3bXq84vjwMHxpSeilqojaipyU95JhfAnNGOpEKZnc8m7\nWeCKPvXtIwKBgQDTzFdmVpURN62tEJSdQGq/+ELoWdVdp6zQvJlJbBMSORBWaLH/\nH2p4AtF03HxOXbVvXeNJsvxxZWUXssS7zvMf3FWfx1FnL1BrwMVqyY/Cav/2olpK\nEXMxdTRTPUMg8q9zf6Db1SIA0j1qqxZjx8yAeRUstvHT5TmnLZyrfgBaiQKBgDNi\nHymUXATUkD/+4PU6bccA5e6iRLp3wzeg9pYG/w4OLaIt+Pv4T3iSbNd6n+eKOP5J\nte9qVZIOkq9bhtZfbF0/lXnCuitTxAMC9fwB//M0YaYKq5lbiypyzwoFCsK6GNpt\nmIMrKd8CX0+Xx4uJAyJg5V8RqgSR3mWZu5cxo8OHAoGBAKAdvAC7SdhymO/py+L2\nOt1/GK09w/wRtbnc44+hZ2wB7rG8ley3duQqitKc/xoojeFtFiGc+ERuAFtfm8Oz\nMvkDv0AF4rSgnHY4szfSj1eznEZW0cmeFOMbi8tR44lBfOaleLk7Zq/UcsycBlRn\n4djskIRhJpvBlhQmZuvKsY7C\n-----END PRIVATE KEY-----\n",
+  "client_email": "jedwardslaptop@sapient-codex-285604.iam.gserviceaccount.com",
+  "client_id": "118098914682782449215",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/jedwardslaptop%40sapient-codex-285604.iam.gserviceaccount.com"
+}
