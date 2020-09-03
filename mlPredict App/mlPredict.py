@@ -45,7 +45,7 @@ def prep_data(test_data):
     return data_final
 
 def download_pickle(bucket, path, key):
-    client = storage.Client.from_service_account_json(key)
+    client = storage.Client()
     bucket = client.get_bucket(bucket)
     blob = storage.Blob(path, bucket)
     byte_stream = io.BytesIO()
@@ -54,7 +54,7 @@ def download_pickle(bucket, path, key):
     return byte_stream
  
 def download_data(bucket, file, key) :
-    client = storage.Client.from_service_account_json(key)
+    client = storage.Client()
     bucket = client.get_bucket(bucket_name)
     blob = bucket.blob(file)
     data = blob.download_as_string()
@@ -64,7 +64,7 @@ def upload_predictions(df, key):
     outputfile = io.StringIO()
     df.to_csv(outputfile, encoding='utf-8', index=False)
     outputfile.seek(0)
-    client = storage.Client.from_service_account_json("key.json")
+    client = storage.Client()
     bucket = client.get_bucket(bucket_name)
     blob = storage.Blob("predicitons.csv", bucket)
     blob.upload_from_file(outputfile)
