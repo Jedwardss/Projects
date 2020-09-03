@@ -42,7 +42,7 @@ def prep_data(test_data):
     return test_data
 
 def download_data(bucket, file) :
-    client = storage.Client.from_service_account_json("key.json")
+    client = storage.Client()
     bucket = client.get_bucket(bucket_name)
     blob = bucket.blob(file)
     data = blob.download_as_string()
@@ -52,7 +52,7 @@ def upload_pickle(model, bucket, path):
     pklfile = io.BytesIO()
     pickle.dump(model, pklfile)
     pklfile.seek(0)
-    client = storage.Client.from_service_account_json("key.json")
+    client = storage.Client()
     bucket = client.get_bucket(bucket_name)
     blob = storage.Blob("svclassifier.pkl", bucket)
     blob.upload_from_file(pklfile)
