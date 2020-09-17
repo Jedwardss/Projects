@@ -5,10 +5,11 @@ Created on Sun Aug 16 16:39:01 2020
 @author: James Edwards
 """
 import pickle
-from flask import Flask
+from flask import Flask, request, jsonify
 from google.cloud import storage
 import io
 import pandas as pd
+import json
 
 test_data_file = 'test.csv'
 path = 'svclassifier.pkl'
@@ -19,7 +20,7 @@ key = 'key.json'
 
 def prep_data(test_data):
     # Missing Values
-
+    
     # Filling the missing values in Age with the medians of Sex and Pclass groups
     test_data['Age'] = test_data.groupby(['Sex', 'Pclass'])['Age'].apply(lambda x: x.fillna(x.median()))
 
@@ -100,7 +101,40 @@ def get_prediction():
     output = pd.DataFrame({'PassengerId': test_data.PassengerId, 'Survived': predictions})
     upload_predictions(output, key)
     return 'Predictions uploaded to GCS'
+ 
+@app.route('/predictjson', methods = ['GET', 'POST'])
+def get_rt_prediction():
     
+    # Get test data
+
+    data = download_data(bucket_name, test_data_file, key)
+    test_data = pd.read_csv(io.BytesIO(data), encoding = 'utf-8', sep = ",")
+    
+    new_data = request.get_json()
+    new_data = pd.DataFrame.from_dict(new_data)
+    
+    rows = new_data.shape[0]
+    test_data.append(new_data)
+
+    # Prep data
+    
+    data_final = prep_data(test_data)
+    data_final = data_final.iloc[-rows:,:]
+    
+    # Get model
+    
+    model = pickle.loads(download_pickle(bucket_name, path, key).read())
+    
+    # Predict
+    
+    predictions = model.predict(data_final)
+
+    # Output
+    
+    output = {
+        "Prediction": str(predictions)
+    }
+    return jsonify(output)
     
 if __name__ == '__main__':
     app.run(debug = True, host='0.0.0.0', port=5000)
